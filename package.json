@@ -1,0 +1,25 @@
+{
+  "name": "mandalore-employee-tracker",
+  "description": "",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willj30/employee-tracker"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/willj30/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/willj30/employee-tracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.0.0",
+    "mysql2": "^2.2.5"
+  }
+}
