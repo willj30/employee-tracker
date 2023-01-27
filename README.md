@@ -24,7 +24,7 @@
 
   Demonstration:
 
- [![Watch the video](./assets/Mandalorian%20Tracker%20Screenshot.png)](chrome-extension://mmeijimgabbpbgpdklnllpncmdofkcpn/app.html#/files/e243486e-af1d-401b-yd8a-887804841735)
+ [![Watch the video](./assets/Mandalorian%20Tracker%20Screenshot.png)](https://drive.google.com/file/d/1_jUk4gFREh8XmN5FbYW5cliogmrnbjiw/view)
 
   ## License
   The license this project is under is MIT. For more information, please click the link below:
