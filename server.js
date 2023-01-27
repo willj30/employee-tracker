@@ -10,11 +10,13 @@ const connection = mysql.createConnection({
   database: 'mandalorian_db',
 });
 
+
 connection.connect(err => {
   if (err) throw err;
-  console.log("WELCOME TO MANDALORE, THIS IS THE WAY!");
+  console.log("WELCOME TO MANDALORE, THIS IS THE WAY!", );
   startMenu();
 });
+
 
 const startMenu = () => {
   inquirer.prompt({
@@ -82,7 +84,7 @@ const viewRoles = () => {
 
 const viewCharacters = () => {
   connection.query(
-    'SELECT characters.id, first_name, last_name, title, credits_salary, dept_name, manager_id FROM ((department JOIN roles ON department.id = roles.dept_id) JOIN characters ON roles.id = characters.roles_id);',
+    'SELECT characters.id, first_name, last_name, title, credits_salary, dept_name, manager_id FROM ((department JOIN roles ON department.id = roles.dept_id) JOIN characters ON roles.id = characters.role_id);',
     function (err, res) {
       if (err) throw err;
       console.table(res);
@@ -117,7 +119,7 @@ const addRole = () => {
       {
         name: 'title',
         type: 'input',
-        message: 'What is the role title?',
+        message: 'What is the new role title?',
       },
       {
         name: 'credits_salary',
@@ -148,22 +150,22 @@ const addCharacter = () => {
       {
         name: 'first_name',
         type: 'input',
-        message: "What is the character's first name?",
+        message: "What is the new character's first name?",
       },
       {
         name: 'last_name',
         type: 'input',
-        message: "What is the character's last name?",
+        message: "What is the new character's last name?",
       },
       {
         name: 'role_id',
         type: 'input',
-        message: "What is the character's role id?",
+        message: "What is the new character's role id?",
       },
       {
         name: 'manager_id',
         type: 'input',
-        message: 'What is the manager Id?',
+        message: "What is the new character's manager's Id?",
       },
     ])
     .then(answer => {
